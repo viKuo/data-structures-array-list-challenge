@@ -1,3 +1,3 @@
-def ArrayList
+class ArrayList
 
 end
