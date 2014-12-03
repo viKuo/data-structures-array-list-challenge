@@ -23,10 +23,10 @@ Again, your `ArrayList` will use `FixedArray` underneath, but it will be able to
 Implement and write RSpec tests for the `ArrayList` class, supporting the following interface:
 
 ### Interface
- - `ArrayList#new(size)`: Instantiate a new dynamic array with initial size `size`.
- - `ArrayList#add(element)`: Add `element` to the end of the list
+ - `ArrayList#new(size)`: Instantiate a new dynamic array with initial size `size`. Return the list
+ - `ArrayList#add(element)`: Add `element` to the end of the list. Return a boolean 
  - `ArrayList#get(index)`: Retrieve an element at `index`
- - `ArrayList#set(index, element)`: Replace an _existing_ element at `index`
+ - `ArrayList#set(index, element)`: Replace an _existing_ element at `index`. Return the element
  - `ArrayList#size`: Return the size of the list
 
 
