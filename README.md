@@ -24,7 +24,7 @@ Implement and write RSpec tests for the `ArrayList` class, supporting the follow
 
 ### Interface
  - `ArrayList#new(size)`: Instantiate a new dynamic array with initial size `size`. Return the list
- - `ArrayList#add(element)`: Add `element` to the end of the list. Return a boolean 
+ - `ArrayList#add(element)`: Add `element` to the end of the list. Return the element added.
  - `ArrayList#get(index)`: Retrieve an element at `index`
  - `ArrayList#set(index, element)`: Replace an _existing_ element at `index`. Return the element
  - `ArrayList#size`: Return the size of the list
