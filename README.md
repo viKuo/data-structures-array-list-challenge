@@ -10,6 +10,8 @@ The `ArrayList` will be a data structure that allows you to create and add to a 
 
 However, your `ArrayList` _will_ use your `FixedArray` class under the hood. You'll need to figure out how to make your `ArrayList` grow.
 
+Note: `ArrayList` is a different data structure than a `FixedArray`, there is no inheritance relationship between them.
+
 ## Why is this important?
 
 Sometimes we can't know how big a collection we need up front, but a typical fixed-size Array forces us to choose a set size when we're writing our code. We could try and allocate an array that's just _really big_, but we'd be using memory inefficiently, and we still might out grow it.
