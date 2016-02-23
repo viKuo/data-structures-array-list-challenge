@@ -1,22 +1,22 @@
 # Array Lists
 
-By now you should have a [Fixed Array class](../../../data-structures-array-challenge). While Fixed Arrays are a fundamental building block of data structures, they're not always the most convenient.
+By now you should have a [Fixed Array class](../../../data-structures-array-challenge). Fixed Arrays are a fundamental building block of data structures, but they're not always the most convenient. From here on out, if you read the term "array" take it to me "an array with a fixed size."
 
 ## The Array List
 
-In this challenge we're going to create an `ArrayList` class. An Array List isn't a special kind of array, it's a _list_ of things that uses an array underneath.
+In this challenge we're going to create an `ArrayList` class. An Array List isn't a special kind of array, it's a _list_ of things that uses an array underneath. Lists are different from arrays because lists can grow.
 
-The `ArrayList` will be a data structure that allows you to create and add to a List of "infinite" size. You won't need to tell the list how many elements it will ultimately contain up front.
+Note: `ArrayList` is a different data structure than a `FixedArray`, there is no inheritance relationship between them. It's unlikely you'll be using inheritance in any of challenges.
 
-However, your `ArrayList` _will_ use your `FixedArray` class under the hood. You'll need to figure out how to make your `ArrayList` grow.
+The `ArrayList` will be a data structure that allows you to create and add to a List of "infinite" size. You won't need to tell the Array List how many elements it will contain up front.
 
-Note: `ArrayList` is a different data structure than a `FixedArray`, there is no inheritance relationship between them.
+That said, your `ArrayList` _will_ use your `FixedArray` class under the hood. You'll need to figure out how to make your `ArrayList` grow given this restriction.
 
 ## Why is this important?
 
-Sometimes we can't know how big a collection we need up front, but a typical fixed-size Array forces us to choose a set size when we're writing our code. We could try and allocate an array that's just _really big_, but we'd be using memory inefficiently, and we still might out grow it.
+Sometimes we can't know how big a collection of things will be up front, but a standard array forces us to choose a set size when we're writing our code, which presents us with a conundrum. We could try and allocate an array that's just _really big_, but we'd be using memory inefficiently, and we still might out grow it.
 
-If the size of our collection can't be determined at compile time, it's impossible for us to just use a standard fixed-size Array.
+If the size of our collection can't be determined at compile time, it's impossible for us to just use a standard fixed-size array.
 
 Again, your `ArrayList` will use `FixedArray` underneath, but it will be able to grow to any number of elements.
 
@@ -25,18 +25,20 @@ Again, your `ArrayList` will use `FixedArray` underneath, but it will be able to
 Implement and write RSpec tests for the `ArrayList` class, supporting the following interface:
 
 ### Interface
- - `ArrayList#new(size)`: Instantiate a new dynamic array with initial size `size`. Return the list
+ - `ArrayList#new(size)`: Instantiate a new dynamic array with initial size `size`.
  - `ArrayList#add(element)`: Add `element` to the end of the list. Return the element added.
  - `ArrayList#get(index)`: Retrieve an element at `index`
  - `ArrayList#set(index, element)`: Replace an _existing_ element at `index`. Return the element
- - `ArrayList#size`: Return the size of the list
+ - `ArrayList#length`: Return the number of items in the list
 
 
 ## Release 2: Insert
 
 Sometimes we want to be able to inject an element into the middle of a list. Implement and test `ArrayList#insert(index, element)`. `#insert` should insert the value `element` in the List at position `index`.
 
-## Release 2: Complexity
+## Release 3: Complexity
+
+A crucial part of knowing a data structure is the big-O of its operations. Knowing how to make one isn't enough.
 
 By now you have the following methods on your ArrayList class:
 
@@ -53,11 +55,11 @@ For example, `ArrayList#new` is `O(1)` — whether our list ends up containing 0
 
 Be sure to note the _best case_ and _worst case_ complexity for each method. Depending on your growth strategy, certain methods may take much longer depending on certain circumstances.
 
-## Release 3: Growth strategies
+## Stretch: Growth strategies
 
 There are many strategies to grow your ArrayList, but they're not all created equal. Think about your own strategy, and whether it's optimal. You may interested to know that there is a growth strategy that will allow for [_amortized_ constant time](http://en.wikipedia.org/wiki/Amortized_analysis).
 
-### Amoritized?
+### Amortized?
 
 In plain English, _amortized_ analysis of an algorithm's complexity considers the time taken in the context of many operations, not just one. If an operation is very costly sometimes, and not costly other times, we average out the cost in an amortized analysis.
 
