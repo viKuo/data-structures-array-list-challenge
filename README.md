@@ -1,6 +1,6 @@
 # Array Lists
 
-By now you should have a [Fixed Array class](../../../data-structures-array-challenge). Fixed Arrays are a fundamental building block of data structures, but they're not always the most convenient. From here on out, if you read the term "array" take it to me "an array with a fixed size."
+By now you should have a [Fixed Array class](../../../data-structures-array-challenge). Fixed Arrays are a fundamental building block of data structures, but they're not always the most convenient. From here on out, if you read the term "array" take it to mean "an array with a fixed size."
 
 ## The Array List
 
