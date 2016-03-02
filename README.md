@@ -27,14 +27,14 @@ Implement and write RSpec tests for the `ArrayList` class, supporting the follow
 ### Interface
  - `ArrayList#new(size)`: Instantiate a new dynamic array with initial size `size`.
  - `ArrayList#add(element)`: Add `element` to the end of the list. Return the element added.
- - `ArrayList#get(index)`: Retrieve an element at `index`
- - `ArrayList#set(index, element)`: Replace an _existing_ element at `index`. Return the element
+ - `ArrayList#get(index)`: Retrieve an element at `index`. If no element exists at that index, throw an OutOfBoundsException
+ - `ArrayList#set(index, element)`: Replace an _existing_ element at `index`. Return the element. If no element exists at that index, throw an OutOfBoundsException
  - `ArrayList#length`: Return the number of items in the list
 
 
 ## Release 2: Insert
 
-Sometimes we want to be able to inject an element into the middle of a list. Implement and test `ArrayList#insert(index, element)`. `#insert` should insert the value `element` in the List at position `index`.
+Sometimes we want to be able to inject an element into the middle of a list. Implement and test `ArrayList#insert(index, element)`. `#insert` should insert the value `element` in the List at position `index`.  If there isn't an element at that position in the list, throw an OutofBoundsException
 
 ## Release 3: Complexity
 
